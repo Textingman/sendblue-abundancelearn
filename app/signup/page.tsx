@@ -11,9 +11,9 @@ export default function SignupPage() {
   const [accountNotifications, setAccountNotifications] = useState(false);
   const [customerCare, setCustomerCare] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState('idle');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setTimeout(() => {
@@ -23,7 +23,7 @@ export default function SignupPage() {
     }, 1500);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -31,13 +31,13 @@ export default function SignupPage() {
     <div className="min-h-screen" style={{ backgroundColor: '#FFFFFF' }}>
       <Navbar />
 
-      <section className="py-12" style={{ backgroundColor: '#F5F7FA' }}>
+      <section className="py-12" style={{ backgroundColor: '#F0F7F4' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-extrabold mb-4" style={{ color: '#1F2937' }}>
-            Talk to Your AI Advisor — Free
+            Begin Your Journey to Abundance
           </h1>
           <p className="text-xl max-w-2xl mx-auto" style={{ color: '#6B7280' }}>
-            Get personalized, unbiased guidance — no sales calls, no pressure, just honest answers.
+            Get personalized life lessons and guidance — no pressure, just honest wisdom to help you live more fully.
           </p>
         </div>
       </section>
@@ -51,8 +51,8 @@ export default function SignupPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h2 className="text-3xl font-bold mb-4" style={{ color: '#1F2937' }}>Request Received!</h2>
-              <p className="text-lg mb-8" style={{ color: '#6B7280' }}>Your submission has been received. Our team will reach out within 24 hours.</p>
+              <h2 className="text-3xl font-bold mb-4" style={{ color: '#1F2937' }}>Welcome to Abundancelearn!</h2>
+              <p className="text-lg mb-8" style={{ color: '#6B7280' }}>Your journey begins now. We'll be in touch with life lessons tailored just for you.</p>
               <Link href="/" className="inline-block px-6 py-3 text-white font-semibold rounded-lg transition-opacity hover:opacity-90" style={{ backgroundColor: '#113627' }}>
                 Return to Home
               </Link>
@@ -83,11 +83,10 @@ export default function SignupPage() {
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2" style={{ color: '#374151' }}>How can we help you?</label>
-                <textarea name="message" rows={4} value={formData.message} onChange={handleChange} placeholder="Tell us about your situation..." className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none" style={{ borderColor: '#E5E7EB' }} />
+                <label className="block text-sm font-medium mb-2" style={{ color: '#374151' }}>What area of life would you like to grow in?</label>
+                <textarea name="message" rows={4} value={formData.message} onChange={handleChange} placeholder="e.g., I want to find more purpose, improve my relationships, build better habits..." className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none" style={{ borderColor: '#E5E7EB' }} />
               </div>
 
-              {/* SMS Consent Checkboxes */}
               <div className="space-y-4 pt-2">
                 <div className="flex items-start gap-3">
                   <input type="checkbox" id="accountNotifications" checked={accountNotifications} onChange={(e) => setAccountNotifications(e.target.checked)} className="mt-1 w-4 h-4 rounded" style={{ accentColor: '#113627' }} />
@@ -104,7 +103,7 @@ export default function SignupPage() {
               </div>
 
               <button type="submit" disabled={isSubmitting} className="w-full py-4 text-white text-lg font-semibold rounded-lg transition-opacity hover:opacity-90" style={{ backgroundColor: isSubmitting ? '#9CA3AF' : '#113627' }}>
-                {isSubmitting ? 'Submitting...' : 'Talk to Our AI'}
+                {isSubmitting ? 'Submitting...' : 'Start My Journey — Free'}
               </button>
             </form>
           )}
