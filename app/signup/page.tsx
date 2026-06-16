@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 
 export default function SignupPage() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
+  const [agreeToTerms, setAgreeToTerms] = useState(false);
   const [promotionalMarketing, setPromotionalMarketing] = useState(false);
   const [customerCare, setCustomerCare] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -15,6 +16,10 @@ export default function SignupPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!agreeToTerms) {
+      alert('Please agree to the Privacy Policy and Terms of Service to continue.');
+      return;
+    }
     setIsSubmitting(true);
     setTimeout(() => {
       setIsSubmitting(false);
@@ -87,17 +92,29 @@ export default function SignupPage() {
                 <textarea name="message" rows={4} value={formData.message} onChange={handleChange} placeholder="e.g., I want to find more purpose, improve my relationships, build better habits..." className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none" style={{ borderColor: '#E5E7EB' }} />
               </div>
 
-              <div className="space-y-4 pt-2">
+              {/* Privacy Policy & Terms — Required */}
+              <div className="pt-2">
+                <div className="flex items-start gap-3 p-4 rounded-lg" style={{ backgroundColor: '#F9FAFB', border: '1px solid #E5E7EB' }}>
+                  <input type="checkbox" id="agreeToTerms" required checked={agreeToTerms} onChange={(e) => setAgreeToTerms(e.target.checked)} className="mt-1 w-4 h-4 rounded" style={{ accentColor: '#113627' }} />
+                  <label htmlFor="agreeToTerms" className="text-sm font-medium" style={{ color: '#374151' }}>
+                    I agree to the <a href="/privacy" style={{ color: '#113627' }} className="underline">Privacy Policy</a> and <a href="/terms" style={{ color: '#113627' }} className="underline">Terms of Service</a>. *
+                  </label>
+                </div>
+              </div>
+
+              {/* SMS Opt-In Checkboxes — Optional */}
+              <div className="space-y-3">
+                <p className="text-sm font-medium" style={{ color: '#6B7280' }}>SMS Notifications (Optional)</p>
                 <div className="flex items-start gap-3">
                   <input type="checkbox" id="promotionalMarketing" checked={promotionalMarketing} onChange={(e) => setPromotionalMarketing(e.target.checked)} className="mt-1 w-4 h-4 rounded" style={{ accentColor: '#113627' }} />
                   <label htmlFor="promotionalMarketing" className="text-sm" style={{ color: '#6B7280' }}>
-                    By checking this box, I agree to receive Promotional Marketing SMS messages from Abundancelearn at the phone number provided. I understand I may opt out at any time by replying STOP. Reply HELP for help. Message and data rates may apply. Message frequency varies. Opting in is optional and not required to submit this form. Consent is not required as a condition of purchasing any products or services. See our <a href="/privacy" style={{ color: '#113627' }}>Privacy Policy</a> and <a href="/terms" style={{ color: '#113627' }}>Terms of Service</a>.
+                    By checking this box, I agree to receive Promotional Marketing SMS messages from Abundancelearn at the phone number provided. I understand I may opt out at any time by replying STOP. Reply HELP for help. Message and data rates may apply. Message frequency varies. Opting in is optional and not required to submit this form. Consent is not required as a condition of purchasing any products or services.
                   </label>
                 </div>
                 <div className="flex items-start gap-3">
                   <input type="checkbox" id="customerCare" checked={customerCare} onChange={(e) => setCustomerCare(e.target.checked)} className="mt-1 w-4 h-4 rounded" style={{ accentColor: '#113627' }} />
                   <label htmlFor="customerCare" className="text-sm" style={{ color: '#6B7280' }}>
-                    By checking this box, I agree to receive Customer Care SMS messages from Abundancelearn at the phone number provided. I understand I may opt out at any time by replying STOP. Reply HELP for help. Message and data rates may apply. Message frequency varies. Opting in is optional and not required to submit this form. Consent is not required as a condition of purchasing any products or services. See our <a href="/privacy" style={{ color: '#113627' }}>Privacy Policy</a> and <a href="/terms" style={{ color: '#113627' }}>Terms of Service</a>.
+                    By checking this box, I agree to receive Customer Care SMS messages from Abundancelearn at the phone number provided. I understand I may opt out at any time by replying STOP. Reply HELP for help. Message and data rates may apply. Message frequency varies. Opting in is optional and not required to submit this form. Consent is not required as a condition of purchasing any products or services.
                   </label>
                 </div>
               </div>
