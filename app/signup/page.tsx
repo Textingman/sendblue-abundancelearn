@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 
 export default function SignupPage() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
-  const [accountNotifications, setAccountNotifications] = useState(false);
+  const [promotionalMarketing, setPromotionalMarketing] = useState(false);
   const [customerCare, setCustomerCare] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -89,9 +89,9 @@ export default function SignupPage() {
 
               <div className="space-y-4 pt-2">
                 <div className="flex items-start gap-3">
-                  <input type="checkbox" id="accountNotifications" checked={accountNotifications} onChange={(e) => setAccountNotifications(e.target.checked)} className="mt-1 w-4 h-4 rounded" style={{ accentColor: '#113627' }} />
-                  <label htmlFor="accountNotifications" className="text-sm" style={{ color: '#6B7280' }}>
-                    By checking this box, I agree to receive Account Notification SMS messages from Abundancelearn at the phone number provided. I understand I may opt out at any time by replying STOP. Reply HELP for help. Message and data rates may apply. Message frequency varies. Opting in is optional and not required to submit this form. Consent is not required as a condition of purchasing any products or services. See our <a href="/privacy" style={{ color: '#113627' }}>Privacy Policy</a> and <a href="/terms" style={{ color: '#113627' }}>Terms of Service</a>.
+                  <input type="checkbox" id="promotionalMarketing" checked={promotionalMarketing} onChange={(e) => setPromotionalMarketing(e.target.checked)} className="mt-1 w-4 h-4 rounded" style={{ accentColor: '#113627' }} />
+                  <label htmlFor="promotionalMarketing" className="text-sm" style={{ color: '#6B7280' }}>
+                    By checking this box, I agree to receive Promotional Marketing SMS messages from Abundancelearn at the phone number provided. I understand I may opt out at any time by replying STOP. Reply HELP for help. Message and data rates may apply. Message frequency varies. Opting in is optional and not required to submit this form. Consent is not required as a condition of purchasing any products or services. See our <a href="/privacy" style={{ color: '#113627' }}>Privacy Policy</a> and <a href="/terms" style={{ color: '#113627' }}>Terms of Service</a>.
                   </label>
                 </div>
                 <div className="flex items-start gap-3">
