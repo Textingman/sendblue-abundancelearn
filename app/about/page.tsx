@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Bot, ShieldCheck, BookOpen } from 'lucide-react';
+import { Sparkles, Heart, BookOpen } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -9,18 +9,18 @@ export default function AboutPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="py-20" style={{ backgroundColor: '#F5F7FA' }}>
+      <section className="py-20" style={{ backgroundColor: '#F0F7F4' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-6" style={{ backgroundColor: '#D1FAE5', color: '#113627' }}>
-              <Bot className="w-4 h-4" />
-              AI-Powered — 100% Independent
+              <Sparkles className="w-4 h-4" />
+              Life Lessons — 100% Free
             </div>
             <h1 className="text-5xl font-extrabold mb-6" style={{ color: '#1F2937' }}>
-              An AI Agent Built to Help,<br />Not to Sell
+              Abundance Is a Way of Living,<br />Not Just a Goal
             </h1>
             <p className="text-xl max-w-3xl mx-auto" style={{ color: '#6B7280' }}>
-              Abundancelearn is an AI-powered platform that guides individuals with honest, unbiased information. We're not a broker or salesperson. We're your independent advisor.
+              Abundancelearn is a platform dedicated to helping people discover the life lessons that lead to true abundance — in health, relationships, purpose, and joy. We believe everyone deserves to live fully.
             </p>
           </div>
         </div>
@@ -32,33 +32,33 @@ export default function AboutPage() {
           <div>
             <h2 className="text-4xl font-bold mb-6" style={{ color: '#1F2937' }}>Why We Built This</h2>
             <p className="text-lg mb-4" style={{ color: '#6B7280' }}>
-              People deserve access to clear, unbiased information without being bombarded by salespeople and high-pressure tactics.
+              Most people think abundance means having more money. But real abundance is about living a life rich in meaning, connection, health, and joy.
             </p>
             <p className="text-lg mb-4" style={{ color: '#6B7280' }}>
-              We built an AI agent that acts as your personal advisor — one that has no financial incentive to push you toward any particular product or service. It simply helps you understand your options and make the best decision for your situation.
+              We built Abundancelearn to share the timeless life lessons that the most fulfilled people have discovered — lessons about mindset, gratitude, purpose, relationships, and resilience.
             </p>
             <p className="text-lg" style={{ color: '#6B7280' }}>
-              Think of it as having a knowledgeable friend available 24/7, completely free, and always on your side.
+              Whether you're navigating a major life transition or simply looking to grow, our AI-powered guidance helps you find the wisdom that applies to your unique journey.
             </p>
           </div>
           <div className="rounded-2xl p-8 border" style={{ backgroundColor: '#FFFFFF', borderColor: '#E5E7EB' }}>
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: '#D1FAE5' }}>
-                  <Bot className="w-5 h-5" style={{ color: '#113627' }} />
+                  <Sparkles className="w-5 h-5" style={{ color: '#113627' }} />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-semibold mb-1" style={{ color: '#1F2937' }}>AI-Powered, Always Available</h3>
-                  <p style={{ color: '#6B7280' }}>Our AI agent is available 24/7 to answer your questions instantly — no waiting, no appointments.</p>
+                  <h3 className="text-lg font-semibold mb-1" style={{ color: '#1F2937' }}>Timeless Life Lessons</h3>
+                  <p style={{ color: '#6B7280' }}>Curated wisdom from philosophy, psychology, and lived experience — distilled into practical guidance you can apply today.</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: '#D1FAE5' }}>
-                  <ShieldCheck className="w-5 h-5" style={{ color: '#113627' }} />
+                  <Heart className="w-5 h-5" style={{ color: '#113627' }} />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-semibold mb-1" style={{ color: '#1F2937' }}>Completely Independent</h3>
-                  <p style={{ color: '#6B7280' }}>We have no financial relationships with any providers. Our only goal is to help you make informed decisions.</p>
+                  <h3 className="text-lg font-semibold mb-1" style={{ color: '#1F2937' }}>Whole-Life Abundance</h3>
+                  <p style={{ color: '#6B7280' }}>We focus on all dimensions of a fulfilling life — not just finances, but health, relationships, purpose, and inner peace.</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -66,8 +66,8 @@ export default function AboutPage() {
                   <BookOpen className="w-5 h-5" style={{ color: '#113627' }} />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-semibold mb-1" style={{ color: '#1F2937' }}>Education First</h3>
-                  <p style={{ color: '#6B7280' }}>We believe informed people make better decisions. Our AI educates, not sells.</p>
+                  <h3 className="text-lg font-semibold mb-1" style={{ color: '#1F2937' }}>Learn at Your Own Pace</h3>
+                  <p style={{ color: '#6B7280' }}>Your journey to abundance is personal. Our AI meets you where you are and guides you at the pace that works for you.</p>
                 </div>
               </div>
             </div>
