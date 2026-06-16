@@ -38,7 +38,7 @@ export default function AboutPage() {
               We built Abundancelearn to share the timeless life lessons that the most fulfilled people have discovered — lessons about mindset, gratitude, purpose, relationships, and resilience.
             </p>
             <p className="text-lg" style={{ color: '#6B7280' }}>
-              Whether you're navigating a major life transition or simply looking to grow, our AI-powered guidance helps you find the wisdom that applies to your unique journey.
+              Whether you're navigating a major life transition or simply looking to grow, our guidance helps you find the wisdom that applies to your unique journey.
             </p>
           </div>
           <div className="rounded-2xl p-8 border" style={{ backgroundColor: '#FFFFFF', borderColor: '#E5E7EB' }}>
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold mb-1" style={{ color: '#1F2937' }}>Learn at Your Own Pace</h3>
-                  <p style={{ color: '#6B7280' }}>Your journey to abundance is personal. Our AI meets you where you are and guides you at the pace that works for you.</p>
+                  <p style={{ color: '#6B7280' }}>Your journey to abundance is personal. Our guidance meets you where you are and helps you grow at the pace that works for you.</p>
                 </div>
               </div>
             </div>
