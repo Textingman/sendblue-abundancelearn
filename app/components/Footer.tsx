@@ -43,7 +43,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4" style={{ color: '#FFFFFF' }}>Contact</h4>
             <p style={{ color: '#FFFFFF' }}>support@abundancelearn.com</p>
-            <p className="mt-2" style={{ color: '#FFFFFF' }}>8 The Green, Ste A<br />Dover, DE 19901</p>
+            <p className="mt-2" style={{ color: '#FFFFFF' }}>1112 17th St<br />Santa Monica, CA 90403</p>
             <p className="mt-2 text-sm" style={{ color: '#FFFFFF' }}>Reply STOP to opt out of SMS. Reply HELP for help.</p>
           </div>
         </div>
